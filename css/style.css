@@ -10,30 +10,44 @@ body {
   color: white;
   font-family: "ProximaNova", serif;
   min-width: 1200px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header,
+.header {
+  width: 85%;
+  margin: 50px auto;
+}
 .main {
-  min-width: 1200px;
+  width: 80%;
+  margin: 0 auto 50px;
+  flex-grow: 1;
 }
 
 .task-name {
   font-size: 35px;
 }
 
-.new-person,
-.table {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .new-person {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px
+}
+
+.btn-add,
+.btn-add:hover {
+  color: white;
 }
 
 .btn-add {
   align-self: flex-end;
+  background-color: #269cf3;
+}
+
+.btn-add:hover {
+  background-color: #273142;
 }
 
 .inputs {
@@ -43,7 +57,7 @@ body {
 
 .inputs .form-group,
 .inputs .date {
-  width: 16%;
+  width: 15%;
 }
 
 .form-control {
@@ -70,4 +84,12 @@ body {
 .datepicker tfoot tr th:hover {
   background-color: #2a8edc;
   border-radius: 50%;
+}
+
+.table th {
+  width: 16.6%;
+}
+
+.footer {
+  padding: 20px;
 }

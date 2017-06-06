@@ -15,81 +15,77 @@
 <body>
   <!--Header section-->
   <header class="header">
-    <div class="container">
-      <h1 class="task-name">People managment</h1>
-    </div>
+    <h1 class="task-name">People managment</h1>
   </header>
   <!--End header section-->
 
   <!--Main section-->
   <main class="main">
-    <div class="container">
-      <form class="new-person">
-        <div class="inputs">
-          <!--Name-->
-          <div class="form-group column">
-            <label>Name
+    <form class="new-person">
+      <div class="inputs">
+        <!--Name-->
+        <div class="form-group column">
+          <label>Name
               <input type="text" class="form-control" id="name" placeholder="Rostik">
             </label>
-          </div>
-          <!--Sex-->
-          <div class="form-group column">
-            <label>Sex
+        </div>
+        <!--Sex-->
+        <div class="form-group column">
+          <label>Sex
               <select class="form-control" id="sex">
                 <option>male</option>
                 <option>female</option>
                 <option>other</option>
               </select>
             </label>
-          </div>
-          <!--Date-->
-          <div class="input-group date" data-provide="datepicker">
-            <label>Date
+        </div>
+        <!--Date-->
+        <div class="input-group date" data-provide="datepicker">
+          <label>Date
               <input type="text" class="form-control">
             </label>
-            <div class="input-group-addon">
-            </div>
-          </div>
-          <!--Address-->
-          <div class="form-group column">
-            <label>Address
-              <input type="text" class="form-control" id="address" placeholder="Lviv">
-            </label>
-          </div>
-          <!--Phone-->
-          <div class="form-group column">
-            <label>Phone
-              <input type="tel" class="form-control" id="phone" placeholder="+380 123 45 67 89">
-            </label>
-          </div>
-          <!--Email-->
-          <div class="form-group column">
-            <label>Email address
-              <input type="email" class="form-control" id="email" placeholder="Email">
-            </label>
+          <div class="input-group-addon">
           </div>
         </div>
-        <input class="btn btn-add" type="submit" value="Add to table">
-      </form>
+        <!--Address-->
+        <div class="form-group column">
+          <label>Address
+              <input type="text" class="form-control" id="address" placeholder="Lviv">
+            </label>
+        </div>
+        <!--Phone-->
+        <div class="form-group column">
+          <label>Phone
+              <input type="tel" class="form-control" id="phone" placeholder="+380 123 45 67 89">
+            </label>
+        </div>
+        <!--Email-->
+        <div class="form-group column">
+          <label>Email address
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </label>
+        </div>
+      </div>
+      <input class="btn btn-add" type="submit" value="Add to table">
+    </form>
 
-      <!--Table-->
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Sex</th>
-            <th>Birth day</th>
-            <th>Address</th>
-            <th>Phone</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <!--Add in JS-->
-        <tbody>
+    <!--Table-->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Sex</th>
+          <th>Birth day</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <!--Add in JS-->
+      <tbody>
 
-        </tbody>
-      </table>
-    </div>
+      </tbody>
+    </table>
   </main>
   <!--End main-->
 
