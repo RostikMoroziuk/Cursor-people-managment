@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>People managment</title>
+</head>
+
+<body>
+  <!--Header section-->
+  <header class="header">
+    <div class="container">
+      <h1 class="task-name">People managment</h1>
+    </div>
+  </header>
+  <!--End header section-->
+
+  <!--Main section-->
+  <main class="main">
+    <div class="container">
+      <form class="new-person">
+        <div class="inputs">
+          <!--Name-->
+          <div class="form-group column">
+            <label>Name
+              <input type="text" class="form-control" id="name" placeholder="Rostik">
+            </label>
+          </div>
+          <!--Sex-->
+          <div class="form-group column">
+            <label>Sex
+              <select class="form-control" id="sex">
+                <option>male</option>
+                <option>female</option>
+                <option>other</option>
+              </select>
+            </label>
+          </div>
+          <!--Date-->
+          <div class="input-group date" data-provide="datepicker">
+            <label>Date
+              <input type="text" class="form-control">
+            </label>
+            <div class="input-group-addon">
+            </div>
+          </div>
+          <!--Address-->
+          <div class="form-group column">
+            <label>Address
+              <input type="text" class="form-control" id="address" placeholder="Lviv">
+            </label>
+          </div>
+          <!--Phone-->
+          <div class="form-group column">
+            <label>Phone
+              <input type="tel" class="form-control" id="phone" placeholder="+380 123 45 67 89">
+            </label>
+          </div>
+          <!--Email-->
+          <div class="form-group column">
+            <label>Email address
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </label>
+          </div>
+        </div>
+        <input class="btn btn-add" type="submit" value="Add to table">
+      </form>
+
+      <!--Table-->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Sex</th>
+            <th>Birth day</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <!--Add in JS-->
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <!--End main-->
+
+  <!--Footer section-->
+  <footer class="footer">
+    &copy;Copyright 2017 <a href="https://www.linkedin.com/in/rostyslav-moroziuk/">Rostyslav Moroziuk</a>
+  </footer>
+  <!--End footer section-->
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

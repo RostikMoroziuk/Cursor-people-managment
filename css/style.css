@@ -1,0 +1,73 @@
+@import url("font.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b2431;
+  color: white;
+  font-family: "ProximaNova", serif;
+  min-width: 1200px;
+}
+
+.header,
+.main {
+  min-width: 1200px;
+}
+
+.task-name {
+  font-size: 35px;
+}
+
+.new-person,
+.table {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new-person {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-add {
+  align-self: flex-end;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputs .form-group,
+.inputs .date {
+  width: 16%;
+}
+
+.form-control {
+  background-color: #222c3c;
+  border: 1px solid #1b2431;
+  border-radius: 5px;
+  color: white;
+}
+
+.dropdown-menu {
+  background-color: #273142;
+}
+
+.input-group-addon {
+  background-color: transparent;
+  border: none;
+}
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused,
+.datepicker .datepicker-switch:hover,
+.datepicker .next:hover,
+.datepicker .prev:hover,
+.datepicker tfoot tr th:hover {
+  background-color: #2a8edc;
+  border-radius: 50%;
+}
