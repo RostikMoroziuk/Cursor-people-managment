@@ -9,9 +9,16 @@
   visibility: hidden;
 }
 
+body,
+.btn-add,
+.btn-add:hover,
+.btn-add:focus,
+.form-control {
+  color: white;
+}
+
 body {
   background-color: #1b2431;
-  color: white;
   font-family: "ProximaNova", serif;
   min-width: 1200px;
   min-height: 100vh;
@@ -41,18 +48,14 @@ body {
 }
 
 .btn-add,
-.btn-add:hover,
-.btn-add:focus {
-  color: white;
-}
-
-.btn-add,
 .btn-add:focus {
   align-self: flex-end;
   background-color: #269cf3;
 }
 
-.btn-add:hover {
+.btn-add:hover,
+.dropdown-menu,
+.table tr {
   background-color: #273142;
 }
 
@@ -70,11 +73,6 @@ body {
   background-color: #222c3c;
   border: 1px solid #1b2431;
   border-radius: 5px;
-  color: white;
-}
-
-.dropdown-menu {
-  background-color: #273142;
 }
 
 .input-group-addon {
@@ -98,10 +96,6 @@ body {
 
 .table th {
   width: 16.6%;
-}
-
-.table tr {
-  background-color: #273142;
 }
 
 .table tbody tr:hover {
