@@ -10,12 +10,12 @@
     //Sex, birth, email validate in html. Address can be what u want
     var name = $("#name").val();
     var sex = $("#sex").val();
-    var date = $("#birth").val();
+    var birth = $("#birth").val();
     var address = $("#address").val();
     var phone = $("#phone").val();
     var email = $("#email").val();
 
-    if (!(/^[a-zA-Z]+$/.test(name))) {
+    if (!(/^[a-zA-Z ]+$/.test(name))) {
       alert("Not correct name");
       return;
     }
@@ -25,7 +25,7 @@
       return;
     }
 
-
+    table.addNewPerson(name, sex, birth, address, phone, email);
   }
 
   //superclass
@@ -35,6 +35,7 @@
 
   SuperUser.prototype.changeDataVisible = function () {
     this._isDataVisible = !this._isDataVisible;
+    return this._isDataVisible;
   }
 
   //class
@@ -62,7 +63,7 @@
     return this._sex;
   }
 
-  User.prototype.geBirth = function () {
+  User.prototype.getBirth = function () {
     return this._birth;
   }
 
@@ -89,31 +90,49 @@
     //Place where will add new person
     this._table = $("#person-table tbody");
     this._users = [];
+    this._id = 0;
   }
 
   Table.prototype.addNewPerson = function (name, sex, birth, address, phone, email) {
     var newPerson = new User(name, sex, birth, address, phone, email);
 
     this._users.push(newPerson);
-    console.log(this._users);
 
     this.renderTable(newPerson);
   }
 
+  Table.prototype.getUsers = function() {
+    return this._users;
+  }
+
   Table.prototype.renderTable = function (newPerson) {
     var newRow = createRow();
+    newRow.attr("data-id", this._id++);
+    newRow.click(changeVisibility);
     this._table.append(newRow);
 
     function createRow() {
       var newRow = $("<tr></tr>");
       newRow.append($("<td></td>").text(newPerson.getName()));
-      newRow.append($("<td></td>").text(newPerson.getSex()));
-      newRow.append($("<td></td>").text(newPerson.getBirth()));
-      newRow.append($("<td></td>").text(newPerson.getAddress()));
-      newRow.append($("<td></td>").text(newPerson.getPhone()));
-      newRow.append($("<td></td>").text(newPerson.getEmail()));
+      newRow.append($("<td></td>").attr("data-visible", "data-visible").text(newPerson.getSex()));
+      newRow.append($("<td></td>").attr("data-visible", "data-visible").text(newPerson.getBirth()));
+      newRow.append($("<td></td>").attr("data-visible", "data-visible").text(newPerson.getAddress()));
+      newRow.append($("<td></td>").attr("data-visible", "data-visible").text(newPerson.getPhone()));
+      newRow.append($("<td></td>").attr("data-visible", "data-visible").text(newPerson.getEmail()));
 
       return newRow;
+    }
+
+    function changeVisibility() {
+      var userId = $(this).attr("data-id");
+      var user = table.getUsers()[userId];
+
+      //if was invisible. method return new curent state
+      if(user.changeDataVisible()) {
+        $(this).find("[data-visible]").removeClass("invisible");
+      } else {
+        $(this).find("[data-visible]").addClass("invisible");
+      }
     }
   }
 

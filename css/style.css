@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 body {
   background-color: #1b2431;
   color: white;
@@ -37,11 +41,13 @@ body {
 }
 
 .btn-add,
-.btn-add:hover {
+.btn-add:hover,
+.btn-add:focus {
   color: white;
 }
 
-.btn-add {
+.btn-add,
+.btn-add:focus {
   align-self: flex-end;
   background-color: #269cf3;
 }
@@ -98,6 +104,11 @@ body {
   background-color: #273142;
 }
 
+.table tbody tr:hover {
+  background-color: #2c3749;
+  cursor: pointer;
+}
+
 .table>thead>tr>th {
   border-bottom: none;
 }
@@ -111,7 +122,7 @@ th:first-child {
 }
 
 th:last-child {
-  border-radius: 0 10px 0;
+  border-radius: 0 10px 0 0;
 }
 
 .footer {
