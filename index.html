@@ -21,12 +21,12 @@
 
   <!--Main section-->
   <main class="main">
-    <form class="new-person">
+    <form class="new-person" id="person">
       <div class="inputs">
         <!--Name-->
         <div class="form-group column">
           <label>Name
-              <input type="text" class="form-control" id="name" placeholder="Rostik">
+              <input type="text" class="form-control" id="name" placeholder="Rostik" required>
             </label>
         </div>
         <!--Sex-->
@@ -42,7 +42,7 @@
         <!--Date-->
         <div class="input-group date" data-provide="datepicker">
           <label>Date
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" id="birth" required>
             </label>
           <div class="input-group-addon">
           </div>
@@ -50,27 +50,27 @@
         <!--Address-->
         <div class="form-group column">
           <label>Address
-              <input type="text" class="form-control" id="address" placeholder="Lviv">
+              <input type="text" class="form-control" id="address" placeholder="Lviv" required>
             </label>
         </div>
         <!--Phone-->
         <div class="form-group column">
           <label>Phone
-              <input type="tel" class="form-control" id="phone" placeholder="+380 123 45 67 89">
+              <input type="tel" class="form-control" id="phone" placeholder="+380 123 45 67 89" required>
             </label>
         </div>
         <!--Email-->
         <div class="form-group column">
           <label>Email address
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
             </label>
         </div>
       </div>
-      <input class="btn btn-add" type="submit" value="Add to table">
+      <input class="btn btn-add" type="submit" value="Add to table" id="add">
     </form>
 
     <!--Table-->
-    <table class="table">
+    <table class="table" id="person-table">
       <thead>
         <tr>
           <th>Name</th>
@@ -83,7 +83,22 @@
       </thead>
       <!--Add in JS-->
       <tbody>
-
+        <tr>
+          <td>Rostik</td>
+          <td>male</td>
+          <td>03/10/1996</td>
+          <td>Lviv</td>
+          <td>+380666481750</td>
+          <td>rmorozyukua@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Moroziuk</td>
+          <td>male</td>
+          <td>03/10/1996</td>
+          <td>Lviv</td>
+          <td>+380111111111</td>
+          <td>rm@gmail.com</td>
+        </tr>
       </tbody>
     </table>
   </main>

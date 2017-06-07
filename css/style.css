@@ -52,12 +52,12 @@ body {
 
 .inputs {
   display: flex;
-  justify-content: space-between;
 }
 
 .inputs .form-group,
 .inputs .date {
-  width: 15%;
+  width: 16.7%;
+  padding-right: 5px;
 }
 
 .form-control {
@@ -86,8 +86,32 @@ body {
   border-radius: 50%;
 }
 
+.table {
+  border-radius: 10px;
+}
+
 .table th {
   width: 16.6%;
+}
+
+.table tr {
+  background-color: #273142;
+}
+
+.table>thead>tr>th {
+  border-bottom: none;
+}
+
+.table>tbody>tr>td {
+  border-top: 1px solid #313d4f;
+}
+
+th:first-child {
+  border-radius: 10px 0 0;
+}
+
+th:last-child {
+  border-radius: 0 10px 0;
 }
 
 .footer {
